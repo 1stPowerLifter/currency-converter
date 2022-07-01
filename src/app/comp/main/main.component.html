@@ -1,0 +1,23 @@
+<div class="main">
+    <h1>{{title}}</h1>
+    <div class="form" >
+
+        <div class="box-left box">
+            <input type="number" class="money" value="{{leftInt}}" (input)="evtLeftInt($event)">
+            <input type="text" class="currency" list="data-left" (input)="evtLeftCur($event)">
+            <datalist id="data-left" class="data-left">
+                <option *ngFor="let c of currency" value="{{c}}"></option>
+            </datalist>
+        </div>
+
+        <div class="box-right box" >
+            <input type="number" class="money" value="{{rightInt}}" (input)="evtRightInt($event)">
+            <input type="text" class="currency" list="data-right" (input)="evtRightCur($event)">
+            <datalist id="data-right" class="data-right">
+                <option *ngFor="let c of currency" value="{{c}}"></option>
+            </datalist>
+        </div>
+        
+    </div>
+</div>
+
